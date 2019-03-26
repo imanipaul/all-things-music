@@ -4,6 +4,7 @@ class AlbumResults extends React.Component {
 
     render() {
         const { allAlbums, match: { params: { albumName } } } = this.props
+        console.log(this.props)
         console.log('allAlbums: ', allAlbums)
         console.log('albumName: ', albumName)
 
@@ -18,6 +19,8 @@ class AlbumResults extends React.Component {
                     <div>
                         <div>{selectedAlbum.name}</div>
                         <div>{selectedAlbum.artist}</div>
+                        <img alt={selectedAlbum.name} src={selectedAlbum.image[2]['#text']} />
+
                     </div>
 
                 }

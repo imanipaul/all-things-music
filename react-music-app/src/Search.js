@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Search extends Component {
 
 
     render() {
-        // if (this.props.allAlbums) {
-        //     let allAlbums = this.props.getAlbums()
-        // }
 
         return (
             <div>
@@ -42,7 +40,7 @@ class Search extends Component {
 
                         this.props.allAlbums.map(element =>
                             <div>
-                                <a key={Math.random()} href={`/albums/${element.name}`}>{element.name} </a>
+                                <Link to={`/albums/${element.name}`}>{element.name} </Link>
                                 <p>{element.artist}</p>
                             </div>
                         )
@@ -54,8 +52,9 @@ class Search extends Component {
 
                         this.props.allSongs.map(element =>
                             <div>
-                                <a key={Math.random()} href={`/songs/${element.name}`} >{element.name} </a>
+                                <Link to={`/songs/${element.name}`} >{element.name} </Link>
                                 <p>{element.artist}</p>
+
                             </div>
                         )
                     }
@@ -63,12 +62,13 @@ class Search extends Component {
                 <div>
                     {this.props.artistInfo &&
                         <div>
-                            <a key={Math.random()} href={`/artists/${this.props.artistInfo.name}`}>{this.props.artistInfo.name} </a>
-                            <p>{this.props.artistInfo.bio.summary} </p>
+                            <Link to={`/artists/${this.props.artistInfo.name}`}>{this.props.artistInfo.name} </Link>
+
                         </div>
 
                     }
                 </div>
+
 
 
 

@@ -3,6 +3,8 @@ import { Route, Link } from "react-router-dom";
 import Home from './Home.js'
 import Search from './Search.js'
 import AlbumResults from './AlbumResults.js'
+import ArtistResults from './ArtistResults.js'
+import SongResults from './SongResults.js'
 import './App.css';
 
 const api_key = process.env.REACT_APP_LASTFM_KEY;
@@ -19,7 +21,7 @@ class App extends Component {
       songResponse: [],
       albumResponse: [],
       songData: '',
-      albumData: '',
+      albumData: [],
       artistData: '',
     }
     this.handleChangeAlbum = this.handleChangeAlbum.bind(this)
@@ -106,13 +108,6 @@ class App extends Component {
     this.getApiAlbums(endPoint)
   }
 
-
-
-  // componentDidMount() {
-  //   this.getTopTracks()
-  // }
-
-
   render() {
     return (
       <div className='App'>
@@ -142,13 +137,31 @@ class App extends Component {
           />
 
           <Route
-            path='/albums/:albumName'
-            render={(props) => (
-              <AlbumResults
-                {...props}
-                allAlbums={this.state.albumData}
-              />
-            )} />
+            exact path='/albums/:albumName'
+            render={
+              (props) => (
+                < AlbumResults
+                  {...props} allAlbums={this.state.albumData}
+                />
+              )} />
+
+          <Route
+            exact path='/artists/:artistName'
+            render={
+              (props) => (
+                < ArtistResults
+                  {...props} artistData={this.state.artistData}
+                />
+              )} />
+
+          <Route
+            exact path='/songs/:songName'
+            render={
+              (props) => (
+                < SongResults
+                  {...props} allSongs={this.state.songData}
+                />
+              )} />
 
 
         </div>
