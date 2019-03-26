@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Link } from "react-router-dom";
 import Home from './Home.js'
 import Search from './Search.js'
+import AlbumResults from './AlbumResults.js'
 import './App.css';
 
 const api_key = process.env.REACT_APP_LASTFM_KEY;
@@ -20,7 +21,6 @@ class App extends Component {
       songData: '',
       albumData: '',
       artistData: '',
-      topTracks: []
     }
     this.handleChangeAlbum = this.handleChangeAlbum.bind(this)
     this.handleChangeSong = this.handleChangeSong.bind(this)
@@ -69,6 +69,7 @@ class App extends Component {
         albumData: json.results.albummatches.album
 
       })
+      console.log(this.state.albumData)
     })
 
   }
@@ -86,21 +87,21 @@ class App extends Component {
 
   handleSubmitSongs(event) {
     event.preventDefault()
-    let endPoint = `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${this.state.song}&api_key=${api_key}&format=json`
+    let endPoint = `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${this.state.song}&api_key=d911ed54b5a0909fa852320983b0f66d&format=json`
     console.log(endPoint)
     this.getApiSongs(endPoint)
   }
 
   handleSubmitArtists(event) {
     event.preventDefault()
-    let endPoint = `http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${this.state.artist}&api_key=${api_key}&format=json`
+    let endPoint = `http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${this.state.artist}&api_key=d911ed54b5a0909fa852320983b0f66d&format=json`
     console.log(endPoint)
     this.getApiArtists(endPoint)
   }
 
   handleSubmitAlbums(event) {
     event.preventDefault()
-    let endPoint = `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${this.state.album}&api_key=${api_key}&format=json`
+    let endPoint = `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${this.state.album}&api_key=d911ed54b5a0909fa852320983b0f66d&format=json`
     console.log(endPoint)
     this.getApiAlbums(endPoint)
   }
@@ -139,6 +140,17 @@ class App extends Component {
                 handleSubmitAlbums={this.handleSubmitAlbums}
                 handleSubmitArtists={this.handleSubmitArtists} />}
           />
+
+          <Route
+            path='/albums/:albumName'
+            render={(props) => (
+              <AlbumResults
+                {...props}
+                allAlbums={this.state.albumData}
+              />
+            )} />
+
+
         </div>
       </div>
     );
