@@ -7,3 +7,10 @@ nav{
   flex-direction: row;
   justify-content: space-around
 }
+
+.chart{
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}

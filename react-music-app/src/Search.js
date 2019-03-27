@@ -39,9 +39,9 @@ class Search extends Component {
                     {this.props.allAlbums &&
 
                         this.props.allAlbums.map(element =>
-                            <div>
-                                <Link to={`/albums/${element.name}`}>{element.name} </Link>
-                                <p>{element.artist}</p>
+                            <div key={element.idAlbum}>
+                                <Link to={`/albums/${element.strAlbum}/${element.strArtist}`}>{element.strAlbum} </Link>
+                                <p>{element.strArtist}</p>
                             </div>
                         )
                     }
@@ -62,16 +62,11 @@ class Search extends Component {
                 <div>
                     {this.props.artistInfo &&
                         <div>
-                            <Link to={`/artists/${this.props.artistInfo.name}`}>{this.props.artistInfo.name} </Link>
+                            <Link to={`/artists/${this.props.artistInfo.strArtist}`}>{this.props.artistInfo.strArtist} </Link>
 
                         </div>
-
                     }
                 </div>
-
-
-
-
             </div>
 
 

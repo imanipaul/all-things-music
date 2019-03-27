@@ -14,9 +14,9 @@ class ArtistResults extends React.Component {
             <div className='results'>
                 {artistData &&
                     <div>
-                        <div>{artistData.name}</div>
-                        <div>{artistData.bio.summary}</div>
-                        <img alt={artistData.name} src={artistData.image[2]['#text']} />
+                        <h1>{artistData.strArtist}</h1>
+                        <p>{artistData.strBiographyEN}</p>
+                        <img alt={artistData.name} src={artistData.strArtistThumb} />
 
                     </div>
 
