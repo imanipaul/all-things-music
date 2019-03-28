@@ -21,6 +21,12 @@ color: #e7dfdd;
 overflow: scroll;
 }
 
+.search-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 
 nav{
   /* margin-top: 20px;
@@ -42,7 +48,6 @@ nav{
 .grid{
   width: 100vw;
 }
-
 
 h1 {
   font-family: 'Yatra One', cursive;
@@ -129,7 +134,23 @@ input[type='submit'] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  /* height: 100vh;
+  width: 100vw; */
+  padding-left: 50px;
+
+}
+
+.results{
+  padding-right: 50px;
+}
+
+.forms-results{
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
   height: 100vh;
 }
 

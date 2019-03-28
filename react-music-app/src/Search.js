@@ -1,94 +1,83 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import AlbumSearch from './AlbumSearch.js'
-import SongSearch from './SongSearch.js'
-import ArtistSearch from './ArtistSearch.js'
 
 class Search extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            albumClicked: false,
-            songClicked: false,
-            artistClicked: false
-
-
-        }
-        this.toggleAlbumClicked = this.toggleAlbumClicked.bind(this)
-        this.toggleSongClicked = this.toggleSongClicked.bind(this)
-        this.toggleArtistClicked = this.toggleArtistClicked.bind(this)
-    }
-
-    toggleAlbumClicked(event) {
-        event.preventDefault()
-        this.setState({
-            albumClicked: true,
-            songClicked: false,
-            artistClicked: false
-        })
-        console.log('clicked')
-        console.log(this.state.albumClicked)
-    }
-    toggleSongClicked(event) {
-        event.preventDefault()
-        this.setState({
-            albumClicked: false,
-            songClicked: true,
-            artistClicked: false
-        })
-    }
-    toggleArtistClicked(event) {
-        event.preventDefault()
-        this.setState({
-            albumClicked: false,
-            songClicked: false,
-            artistClicked: true
-        })
-    }
-
 
     render() {
         return (
-            <div className='forms'>
+            <div className='search-page'>
+                <h3>What are you looking for?</h3>
+                <div className='forms-results'>
+                    <div className='forms'>
 
-                <form onSubmit={this.props.handleSubmitArtists && this.toggleArtistClicked}>
+                        <form onSubmit={this.props.handleSubmitArtists}>
 
-                    <label>
-                        Search here for artist:
-                        <input onChange={this.props.handleChangeArtist} name='artist' type='text' placeholder='enter artist ' />
+                            <label>
+                                An artist:
+                        <input onChange={this.props.handleChangeArtist} name='artist' type='text' placeholder='Enter Artist Name' />
 
-                    </label>
-                    <input type='Submit' />
-                </form>
+                            </label>
+                            <input type='Submit' />
+                        </form>
 
-                <form className='songs-submit' onSubmit={this.props.handleSubmitSongs && this.toggleSongClicked}>
+                        <form className='songs-submit' onSubmit={this.props.handleSubmitSongs}>
 
-                    <label className='songs-submit-label'>
-                        Search here for song:
+                            <label className='songs-submit-label'>
+                                A song:
                         <input className='songs-submit-input-artist' onChange={this.props.handleChangeArtist} name='criteria' type='text' placeholder='artist' />
-                        <input className='songs-submit-input-song' onChange={this.props.handleChangeSong} name='criteria' type='text' placeholder='track title' />
+                                <input className='songs-submit-input-song' onChange={this.props.handleChangeSong} name='criteria' type='text' placeholder='Enter Song Title' />
 
-                    </label>
-                    <input className='songs-submit-button' type='Submit' onClick={this.toggleSongClicked} />
-                </form>
+                            </label>
+                            <input className='songs-submit-button' type='Submit' onClick={this.toggleSongClicked} />
+                        </form>
 
-                <form onSubmit={this.props.handleSubmitAlbums && this.toggleAlbumClicked}>
+                        <form onSubmit={this.props.handleSubmitAlbums}>
 
-                    <label>
-                        Search here for album:
-                        <input onChange={this.props.handleChangeAlbum} name='album' type='text' placeholder='enter album' />
+                            <label>
+                                An album:
+                        <input onChange={this.props.handleChangeAlbum} name='album' type='text' placeholder='Enter Album Name' />
 
-                    </label>
-                    <input type='Submit' />
-                </form>
+                            </label>
+                            <input type='Submit' />
+                        </form>
 
-                {this.state.albumClicked ? <AlbumSearch /> : <div></div>}
-                {this.state.songClicked ? <SongSearch /> : <div></div>}
-                {this.state.artistClicked ? <ArtistSearch /> : <div></div>}
+                    </div>
 
+                    <div className='results' >
+                        {
+                            (this.props.render === 'album' &&
+                                <div>
+                                    {this.props.allAlbums.map(element =>
+                                        <div key={element.idAlbum}>
+                                            <Link to={`/albums/${element.strAlbum}/${element.strArtist}`}>{element.strAlbum} </Link>
+                                            <p>{element.strArtist}</p>
+                                        </div>
+                                    )}
+                                </div>) ||
 
+                            this.props.render === 'song' &&
+                            <div>
+                                {this.props.songData &&
+                                    <div>
+                                        <Link to={`/songs/${this.props.songData.strTrack}`} >{this.props.songData.strTrack} </Link>
+                                        <p>{this.props.songData.strArtist}</p>
+                                    </div>
 
+                                }
+                            </div> ||
 
+                            this.props.render === 'artist' &&
+                            <div>
+                                {this.props.artistInfo &&
+                                    <div>
+                                        <Link to={`/artists/${this.props.artistInfo.strArtist}`}>{this.props.artistInfo.strArtist} </Link>
+                                    </div>
+                                }
+                            </div>
+
+                        }
+                    </div>
+                </div>
             </div>
 
 

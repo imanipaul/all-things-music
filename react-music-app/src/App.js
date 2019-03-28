@@ -27,7 +27,9 @@ class App extends Component {
       albumData: [],
       artistData: '',
 
-
+      albumClicked: false,
+      songClicked: false,
+      artistClicked: false,
       render: '',
 
     }
@@ -114,7 +116,10 @@ class App extends Component {
     this.getApiSongs(songEndPoint)
     this.getLyrics(lyricsEndPoint)
     this.setState({
-      render: 'song'
+      render: 'song',
+      albumClicked: false,
+      songClicked: true,
+      artistClicked: false
     })
   }
 
@@ -123,7 +128,10 @@ class App extends Component {
     let endPoint = `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${this.state.artist}`
     this.getApiArtists(endPoint)
     this.setState({
-      render: 'artist'
+      render: 'artist',
+      albumClicked: false,
+      songClicked: false,
+      artistClicked: true
     })
   }
 
@@ -132,7 +140,10 @@ class App extends Component {
     let endPoint = `https://www.theaudiodb.com/api/v1/json/1/searchalbum.php?a=${this.state.album}`
     this.getApiAlbums(endPoint)
     this.setState({
-      render: 'album'
+      render: 'album',
+      albumClicked: true,
+      songClicked: false,
+      artistClicked: false
     })
   }
 
@@ -178,6 +189,9 @@ class App extends Component {
           render={(props) =>
             <Search {...props}
               render={this.state.render}
+              albumClicked={this.state.albumClicked}
+              songClicked={this.state.songClicked}
+              artistClicked={this.state.artistClicked}
               songData={this.state.songData}
               allAlbums={this.state.albumData}
               artistInfo={this.state.artistData}
