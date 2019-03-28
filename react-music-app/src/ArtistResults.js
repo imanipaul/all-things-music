@@ -1,4 +1,5 @@
 import React from 'react'
+import ReadMoreAndLess from 'react-read-more-less'
 
 class ArtistResults extends React.Component {
 
@@ -13,7 +14,19 @@ class ArtistResults extends React.Component {
                         <div>Country: {artistData.strCountry}</div>
                         <div>Genre: {artistData.strGenre}</div>
                         <div>Label: {artistData.strLabel}</div>
-                        <p>{artistData.strBiographyEN}</p>
+
+                        <p>
+                            <ReadMoreAndLess
+                                ref={this.ReadMore}
+                                className="read-more-content"
+                                charLimit={250}
+                                readMoreText="Read more"
+                                readLessText="Read less"
+                            >{artistData.strBiographyEN}
+                            </ReadMoreAndLess>
+                        </p>
+
+
                         <img alt={artistData.name} src={artistData.strArtistThumb} />
 
                     </div>

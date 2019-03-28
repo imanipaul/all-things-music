@@ -83,26 +83,46 @@ class Home extends React.Component {
 
                 <div className='chart'>
                     <Chart
-                        width={'1000px'}
-                        height={'1000px'}
-                        chartType="Bar"
+                        width={'800px'}
+                        height={'500px'}
+                        chartType="BarChart"
                         loader={<div>Loading Chart</div>}
                         data={this.state.artistListeners}
+
                         options={{
                             title: `Top Artists in ${this.state.country}`,
-                            chartArea: { width: '100%' },
-                            vAxis: { title: 'Listeners' },
-                            hAxis: { textPosition: 'none' },
-                            legend: 'none',
-                            // groupWidth: '80%',
-                            is3D: true,
+                            titleTextStyle: {
+                                color: 'black',
+                                fontSize: 25,
+                                bold: true
+                            },
                             animation: {
                                 startup: true,
-                                easing: 'linear',
-                                duration: 1500,
+                                easing: 'inAndOut',
+                                duration: 900,
 
                             },
-                            // enableInteractivity: true,
+                            backgroundColor: {
+                                fill: 'darkgrey'
+                            },
+                            vAxis: {
+                                title: 'Listeners',
+
+
+                            },
+                            hAxis: {
+                                title: 'Artists',
+                                gridlines: {
+                                    color: 'red',
+                                    count: 0
+                                }
+                            },
+
+                            legend: 'none',
+                            // groupWidth: '80%',
+                            // is3D: true,
+
+                            enableInteractivity: true,
 
                         }}
                         chartEvents={[
@@ -110,6 +130,13 @@ class Home extends React.Component {
                                 eventName: 'animationfinish',
                                 callback: () => {
                                     console.log('Animation Finished')
+                                },
+                            },
+                            {
+                                eventName: 'error',
+                                callback: () => {
+
+                                    console.log('errors detected')
                                 },
                             },
                         ]}

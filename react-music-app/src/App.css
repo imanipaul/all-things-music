@@ -1,11 +1,23 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: darkgrey
+
 }
 
 nav{
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  height: 40px;
+  padding-top: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around
+  justify-content: space-around;
+  background-color: darkgrey;
+  width: 100vw;
 }
 
 .chart{
@@ -13,4 +25,62 @@ nav{
   width: 100vw;
   align-items: center;
   justify-content: center;
+}
+
+.nav-links{
+  text-decoration: none;
+  color: blue
+}
+
+.nav-links:hover{
+  text-decoration: underline;
+  color: rgb(0, 195, 255)
+}
+
+.main{
+  height: 100vh;
+  width: 100vw;
+}
+
+.forms{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.songs-submit-input-artist{
+  margin-left: 10px
+}
+.songs-submit-input-song{
+  margin-left: 10px;
+  margin-right: 10px
+}
+
+input[name='artist']{
+margin-left: 10px;
+margin-right: 10px
+}
+
+input[name='album']{
+margin-left: 10px;
+margin-right: 10px
+}
+
+.artist-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 30vh;
+  width: 100vw
+}
+
+img {
+  height: 200px;
+}
+
+.album-description{
+  width: 300px;
 }

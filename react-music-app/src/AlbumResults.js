@@ -1,4 +1,6 @@
 import React from 'react'
+import ReadMoreAndLess from 'react-read-more-less'
+
 
 class AlbumResults extends React.Component {
 
@@ -19,7 +21,16 @@ class AlbumResults extends React.Component {
                         <div>Label: {selectedAlbum.strLabel}</div>
                         <div>Genre: {selectedAlbum.strGenre}</div>
                         <img alt={selectedAlbum.strAlbum} src={selectedAlbum.strAlbumThumb} />
-                        {selectedAlbum.strDescriptionEN && <div>Description: {selectedAlbum.strDescriptionEN}</div>}
+                        <div className='album-description'>
+                            <ReadMoreAndLess
+                                ref={this.ReadMore}
+                                className="read-more-content"
+                                charLimit={250}
+                                readMoreText="Read more"
+                                readLessText="Read less"
+                            >{selectedAlbum.strDescriptionEN}
+                            </ReadMoreAndLess>
+                        </div>
 
                     </div>
 

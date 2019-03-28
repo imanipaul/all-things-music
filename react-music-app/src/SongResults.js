@@ -1,5 +1,5 @@
 import React from 'react'
-
+import ReadMoreAndLess from 'react-read-more-less'
 class SongResults extends React.Component {
 
     render() {
@@ -15,10 +15,29 @@ class SongResults extends React.Component {
 
                         <div>Album: {songData.strAlbum}</div>
                         <div>Genre: {songData.strGenre}</div>
-                        <div>Description: {songData.strDescriptionEN}</div>
+
+                        <div>
+                            <ReadMoreAndLess
+                                ref={this.ReadMore}
+                                className="read-more-content"
+                                charLimit={250}
+                                readMoreText="Read more"
+                                readLessText="Read less"
+                            >{songData.strDescriptionEN}
+                            </ReadMoreAndLess>
+                        </div>
+
                         <a href={songData.strMusicVid}>{songData.strMusicVid}</a>
                         <img alt={songData.name} src={songData.strTrackThumb} />
-                        <div>lyrics: {this.props.songLyrics}</div>
+                        <div>
+                            <ReadMoreAndLess
+                                ref={this.ReadMore}
+                                className="read-more-content"
+                                charLimit={250}
+                                readMoreText="Read more"
+                                readLessText="Read less"
+                            >{this.props.songLyrics}</ReadMoreAndLess>
+                        </div>
 
                     </div>
                 }

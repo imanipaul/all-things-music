@@ -128,8 +128,8 @@ class App extends Component {
     return (
       <div className='App'>
         <nav className='nav'>
-          <Link to='/'>Home</Link>
-          <Link to='/search'>Search</Link>
+          <Link to='/' className='nav-links'>Home</Link>
+          <Link to='/search' className='nav-links'>Search</Link>
         </nav>
 
         <div className='main'>
