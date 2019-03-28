@@ -19,6 +19,7 @@ class App extends Component {
       artist: '',
       song: '',
       album: '',
+      lyrics: '',
       artistResponse: [],
       songResponse: [],
       albumResponse: [],
@@ -60,10 +61,19 @@ class App extends Component {
   getApiSongs(endPoint) {
     fetch(endPoint).then(response => response.json()).then(json => {
       this.setState({
-        songData: json.results.trackmatches.track
+        songData: json.track[0]
 
       })
       console.log(this.state.songData)
+    })
+  }
+
+  getLyrics(endPoint) {
+    fetch(endPoint).then(response => response.json()).then(json => {
+      this.setState({
+        lyrics: json.lyrics
+      })
+      console.log('lyrics', this.state.lyrics)
     })
   }
 
@@ -97,15 +107,18 @@ class App extends Component {
 
   handleSubmitSongs(event) {
     event.preventDefault()
-    let endPoint = `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${this.state.song}&api_key=${api_key}&format=json`
-    console.log(endPoint)
-    this.getApiSongs(endPoint)
+    let songEndPoint = `https://www.theaudiodb.com/api/v1/json/1/searchtrack.php?s=${this.state.artist}&t=${this.state.song}`
+    let lyricsEndPoint = `https://api.lyrics.ovh/v1/${this.state.artist}/${this.state.song}`
+    console.log('songEndPoint', songEndPoint)
+    console.log('lyricsEndPoint', lyricsEndPoint)
+    this.getApiSongs(songEndPoint)
+    this.getLyrics(lyricsEndPoint)
   }
 
   handleSubmitArtists(event) {
     event.preventDefault()
     let endPoint = `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${this.state.artist}`
-    // let endPoint = `http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${this.state.artist}&api_key=d911ed54b5a0909fa852320983b0f66d&format=json`
+
     console.log(endPoint)
     this.getApiArtists(endPoint)
   }
@@ -113,12 +126,10 @@ class App extends Component {
   handleSubmitAlbums(event) {
     event.preventDefault()
     let endPoint = `https://www.theaudiodb.com/api/v1/json/1/searchalbum.php?a=${this.state.album}`
-    // let endPoint = `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${this.state.album}&api_key=d911ed54b5a0909fa852320983b0f66d&format=json`
+
     console.log(endPoint)
     this.getApiAlbums(endPoint)
   }
-
-
 
   render() {
     return (
@@ -146,7 +157,7 @@ class App extends Component {
             exact path='/search'
             render={(props) =>
               <Search {...props}
-                allSongs={this.state.songData}
+                songData={this.state.songData}
                 allAlbums={this.state.albumData}
                 artistInfo={this.state.artistData}
                 handleChangeSong={this.handleChangeSong}
@@ -180,7 +191,7 @@ class App extends Component {
             render={
               (props) => (
                 < SongResults
-                  {...props} allSongs={this.state.songData}
+                  {...props} songData={this.state.songData} songLyrics={this.state.lyrics}
                 />
               )} />
 

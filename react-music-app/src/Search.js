@@ -5,7 +5,6 @@ class Search extends Component {
 
 
     render() {
-
         return (
             <div>
                 <form onSubmit={this.props.handleSubmitArtists}>
@@ -21,9 +20,11 @@ class Search extends Component {
 
                     <label>
                         Search here for song:
-                <input onChange={this.props.handleChangeSong} name='criteria' type='text' placeholder='enter song' />
+                        <input onChange={this.props.handleChangeArtist} name='criteria' type='text' placeholder='artist' />
+                        <input onChange={this.props.handleChangeSong} name='criteria' type='text' placeholder='track title' />
 
                     </label>
+                    <input type='Submit' />
                 </form>
 
                 <form onSubmit={this.props.handleSubmitAlbums}>
@@ -48,22 +49,20 @@ class Search extends Component {
                 </div>
 
                 <div>
-                    {this.props.allSongs &&
+                    {this.props.songData &&
 
-                        this.props.allSongs.map(element =>
-                            <div>
-                                <Link to={`/songs/${element.name}`} >{element.name} </Link>
-                                <p>{element.artist}</p>
 
-                            </div>
-                        )
+                        <div>
+                            <Link to={`/songs/${this.props.songData.strTrack}`} >{this.props.songData.strTrack} </Link>
+                            <p>{this.props.songData.strArtist}</p>
+                        </div>
+
                     }
                 </div>
                 <div>
                     {this.props.artistInfo &&
                         <div>
                             <Link to={`/artists/${this.props.artistInfo.strArtist}`}>{this.props.artistInfo.strArtist} </Link>
-
                         </div>
                     }
                 </div>

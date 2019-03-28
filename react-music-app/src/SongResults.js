@@ -3,23 +3,30 @@ import React from 'react'
 class SongResults extends React.Component {
 
     render() {
-        const { allSongs, match: { params: { songName } } } = this.props
-        console.log(this.props)
-        console.log('allSongs: ', allSongs)
+        const { songData, match: { params: { songName } } } = this.props
+        // console.log(this.props)
+        console.log('songData: ', songData)
         console.log('songName: ', songName)
+        console.log('songLyrics: ', this.props.songLyrics)
 
-        const selectedSong = allSongs.find(song => {
-            return song.name === songName
-        })
+        // const selectedSong = allSongs.find(song => {
+        //     return song.name === songName
+        // })
 
 
         return (
             <div className='results'>
-                {selectedSong &&
+                {songData &&
                     <div>
-                        <div>Title: {selectedSong.name}</div>
-                        <div>Artist: {selectedSong.artist}</div>
-                        <img alt={selectedSong.name} src={selectedSong.image[2]['#text']} />
+                        <div>Title: {songData.strTrack}</div>
+                        <div>Artist: {songData.strArtist}</div>
+
+                        <div>Album: {songData.strAlbum}</div>
+                        <div>Genre: {songData.strGenre}</div>
+                        <div>Description: {songData.strDescriptionEN}</div>
+                        <a href={songData.strMusicVid}>{songData.strMusicVid}</a>
+                        <img alt={songData.name} src={songData.strTrackThumb} />
+                        <div>lyrics: {this.props.songLyrics}</div>
 
                     </div>
                 }
