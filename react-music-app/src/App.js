@@ -11,8 +11,6 @@ import Footer from './Footer'
 
 import './App.css';
 
-const api_key = process.env.REACT_APP_LASTFM_KEY
-
 
 class App extends Component {
   constructor(props) {
@@ -28,8 +26,10 @@ class App extends Component {
       songData: '',
       albumData: [],
       artistData: '',
-      topArtists: [],
-      artistListeners: []
+
+
+      render: '',
+
     }
     this.handleChangeAlbum = this.handleChangeAlbum.bind(this)
     this.handleChangeSong = this.handleChangeSong.bind(this)
@@ -37,6 +37,7 @@ class App extends Component {
     this.handleSubmitArtists = this.handleSubmitArtists.bind(this)
     this.handleSubmitSongs = this.handleSubmitSongs.bind(this)
     this.handleSubmitAlbums = this.handleSubmitAlbums.bind(this)
+    this.reload = this.reload.bind(this)
   }
 
   handleChangeArtist(event) {
@@ -112,18 +113,33 @@ class App extends Component {
     let lyricsEndPoint = `https://api.lyrics.ovh/v1/${this.state.artist}/${this.state.song}`
     this.getApiSongs(songEndPoint)
     this.getLyrics(lyricsEndPoint)
+    this.setState({
+      render: 'song'
+    })
   }
 
   handleSubmitArtists(event) {
     event.preventDefault()
     let endPoint = `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${this.state.artist}`
     this.getApiArtists(endPoint)
+    this.setState({
+      render: 'artist'
+    })
   }
 
   handleSubmitAlbums(event) {
     event.preventDefault()
     let endPoint = `https://www.theaudiodb.com/api/v1/json/1/searchalbum.php?a=${this.state.album}`
     this.getApiAlbums(endPoint)
+    this.setState({
+      render: 'album'
+    })
+  }
+
+  reload() {
+    this.setState({
+      render: ''
+    })
   }
 
   render() {
@@ -136,12 +152,12 @@ class App extends Component {
           <Link to='/charts' className='nav-links'>
             <button>Charts</button>
           </Link>
+
           <Link to='/search' className='nav-links'>
-            <button>Search</button>
+            <button onClick={this.reload}>Search</button>
           </Link>
         </nav>
 
-        {/* <div className='main'> */}
 
 
         <Route
@@ -149,10 +165,11 @@ class App extends Component {
           component={Landing}
         />
 
+
         <Route exact path='/charts'
           render={
             (props) =>
-              <Home {...props} artisListeners={this.state.artistListeners} topArtists={this.state.topArtists} />
+              <Home {...props} />
           }
         />
 
@@ -160,6 +177,7 @@ class App extends Component {
           exact path='/search'
           render={(props) =>
             <Search {...props}
+              render={this.state.render}
               songData={this.state.songData}
               allAlbums={this.state.albumData}
               artistInfo={this.state.artistData}

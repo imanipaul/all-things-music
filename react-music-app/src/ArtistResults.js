@@ -15,7 +15,7 @@ class ArtistResults extends React.Component {
                         <div>Genre: {artistData.strGenre}</div>
                         <div>Label: {artistData.strLabel}</div>
 
-                        <p>
+                        <div>
                             <ReadMoreAndLess
                                 ref={this.ReadMore}
                                 className="read-more-content"
@@ -24,7 +24,7 @@ class ArtistResults extends React.Component {
                                 readLessText="Read less"
                             >{artistData.strBiographyEN}
                             </ReadMoreAndLess>
-                        </p>
+                        </div>
 
 
                         <img alt={artistData.name} src={artistData.strArtistThumb} />

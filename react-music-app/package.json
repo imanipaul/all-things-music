@@ -8,7 +8,8 @@
     "react-google-charts": "^3.0.11",
     "react-read-more-less": "^0.1.6",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "react-stack-grid": "^0.7.1"
   },
   "scripts": {
     "start": "react-scripts start",

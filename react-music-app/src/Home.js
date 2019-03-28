@@ -1,5 +1,8 @@
 import React from 'react'
 import Chart from 'react-google-charts'
+import StackGrid, { transitions, easings } from 'react-stack-grid'
+
+const { scaleDown } = transitions;
 
 const api_key = process.env.REACT_APP_LASTFM_KEY
 
@@ -30,10 +33,11 @@ class Home extends React.Component {
         let info = topArtists.map(artist => {
             const container = []
             container[0] = artist.name
-            container[1] = parseInt(artist.listeners)
+            // container[1] = parseInt(artist.listeners)
+            container[1] = artist.image[2]['#text']
             return container
         })
-        console.log('update', info.unshift(['Artist', 'Listeners']))
+        // console.log('update', info.unshift(['Artist', 'Listeners']))
         this.setState({
             artistListeners: info
         })
@@ -70,19 +74,39 @@ class Home extends React.Component {
     render() {
         return (
 
-            <div>
-                <h1>Music Charts</h1>
-                <form onSubmit={this.handleSubmitCountry}>
+            <div className='home-wrapper'>
+                <div className='home-text'>
+                    <h1>Music Charts</h1>
+                    <form onSubmit={this.handleSubmitCountry}>
 
-                    <label>
-                        Search here by Country:
+                        <label>
+                            Search here by Country:
                 <input onChange={this.handleChangeCountry} name='country' type='text' placeholder='enter country ' />
 
-                    </label>
-                </form>
+                        </label>
+                    </form>
+                </div>
+                <div className='grid'>
+                    <StackGrid
+                        enter={scaleDown.enter}
+                        gutterWidth={50}
+                        gutterHeight={50}
+                        easing={easings.cubicOut}
+                        columnWidth={225}
+                    >
 
-                <div className='chart'>
-                    <Chart
+                        {this.state.artistListeners.map((element, index) =>
+                            <div key={index}>
+                                {/* <p>{element[0]}</p> */}
+                                <img src={element[1]} />
+                            </div>
+                        )}
+
+                    </StackGrid>
+                </div>
+
+                {/* <div className='chart'> */}
+                {/* <Chart
                         width={'800px'}
                         height={'200px'}
                         chartType="BarChart"
@@ -139,13 +163,13 @@ class Home extends React.Component {
                                     console.log('errors detected')
                                 },
                             },
-                        ]}
+                        ]} */}
 
 
 
-                    />
-                </div>
+                {/* /> */}
             </div>
+            // </div>
         )
     }
 }
