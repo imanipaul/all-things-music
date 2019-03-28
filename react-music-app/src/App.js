@@ -5,6 +5,8 @@ import Search from './Search.js'
 import AlbumResults from './AlbumResults.js'
 import ArtistResults from './ArtistResults.js'
 import SongResults from './SongResults.js'
+import Landing from './Landing'
+import Footer from './Footer'
 
 
 import './App.css';
@@ -128,67 +130,78 @@ class App extends Component {
     return (
       <div className='App'>
         <nav className='nav'>
-          <Link to='/' className='nav-links'>Home</Link>
-          <Link to='/search' className='nav-links'>Search</Link>
+          <Link to='/' className='nav-links'>
+            <button>Home</button>
+          </Link>
+          <Link to='/charts' className='nav-links'>
+            <button>Charts</button>
+          </Link>
+          <Link to='/search' className='nav-links'>
+            <button>Search</button>
+          </Link>
         </nav>
 
-        <div className='main'>
-          <Route
-            exact path='/'
-            render={
-              (props) => (
-                <Home
-                  {...props}
-                  artistListeners={this.state.artistListeners}
-                  topArtists={this.state.topArtists}
-
-                />
-              )}
-          />
-
-          <Route
-            exact path='/search'
-            render={(props) =>
-              <Search {...props}
-                songData={this.state.songData}
-                allAlbums={this.state.albumData}
-                artistInfo={this.state.artistData}
-                handleChangeSong={this.handleChangeSong}
-                handleChangeArtist={this.handleChangeArtist}
-                handleChangeAlbum={this.handleChangeAlbum}
-                handleSubmitSongs={this.handleSubmitSongs}
-                handleSubmitAlbums={this.handleSubmitAlbums}
-                handleSubmitArtists={this.handleSubmitArtists} />}
-          />
-
-          <Route
-            exact path='/albums/:albumName/:artistName'
-            render={
-              (props) => (
-                < AlbumResults
-                  {...props} allAlbums={this.state.albumData}
-                />
-              )} />
-
-          <Route
-            exact path='/artists/:artistName'
-            render={
-              (props) => (
-                < ArtistResults
-                  {...props} artistData={this.state.artistData}
-                />
-              )} />
-
-          <Route
-            exact path='/songs/:songName'
-            render={
-              (props) => (
-                < SongResults
-                  {...props} songData={this.state.songData} songLyrics={this.state.lyrics}
-                />
-              )} />
+        {/* <div className='main'> */}
 
 
+        <Route
+          exact path='/'
+          component={Landing}
+        />
+
+        <Route exact path='/charts'
+          render={
+            (props) =>
+              <Home {...props} artisListeners={this.state.artistListeners} topArtists={this.state.topArtists} />
+          }
+        />
+
+        <Route
+          exact path='/search'
+          render={(props) =>
+            <Search {...props}
+              songData={this.state.songData}
+              allAlbums={this.state.albumData}
+              artistInfo={this.state.artistData}
+              handleChangeSong={this.handleChangeSong}
+              handleChangeArtist={this.handleChangeArtist}
+              handleChangeAlbum={this.handleChangeAlbum}
+              handleSubmitSongs={this.handleSubmitSongs}
+              handleSubmitAlbums={this.handleSubmitAlbums}
+              handleSubmitArtists={this.handleSubmitArtists} />}
+        />
+
+        <Route
+          exact path='/albums/:albumName/:artistName'
+          render={
+            (props) => (
+              < AlbumResults
+                {...props} allAlbums={this.state.albumData}
+              />
+            )} />
+
+        <Route
+          exact path='/artists/:artistName'
+          render={
+            (props) => (
+              < ArtistResults
+                {...props} artistData={this.state.artistData}
+              />
+            )} />
+
+        <Route
+          exact path='/songs/:songName'
+          render={
+            (props) => (
+              < SongResults
+                {...props} songData={this.state.songData} songLyrics={this.state.lyrics}
+              />
+            )} />
+
+
+        {/* </div> */}
+        <div className='footer'>
+          <Footer />
         </div>
       </div>
     );

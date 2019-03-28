@@ -84,7 +84,7 @@ class Home extends React.Component {
                 <div className='chart'>
                     <Chart
                         width={'800px'}
-                        height={'500px'}
+                        height={'200px'}
                         chartType="BarChart"
                         loader={<div>Loading Chart</div>}
                         data={this.state.artistListeners}
