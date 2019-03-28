@@ -4,21 +4,13 @@ class SongResults extends React.Component {
 
     render() {
         const { songData, match: { params: { songName } } } = this.props
-        // console.log(this.props)
-        console.log('songData: ', songData)
-        console.log('songName: ', songName)
-        console.log('songLyrics: ', this.props.songLyrics)
-
-        // const selectedSong = allSongs.find(song => {
-        //     return song.name === songName
-        // })
 
 
         return (
             <div className='results'>
                 {songData &&
                     <div>
-                        <div>Title: {songData.strTrack}</div>
+                        <h1>{songData.strTrack}</h1>
                         <div>Artist: {songData.strArtist}</div>
 
                         <div>Album: {songData.strAlbum}</div>

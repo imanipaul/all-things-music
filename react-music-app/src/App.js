@@ -56,7 +56,6 @@ class App extends Component {
     })
   }
 
-
   //for songs
   getApiSongs(endPoint) {
     fetch(endPoint).then(response => response.json()).then(json => {
@@ -109,8 +108,6 @@ class App extends Component {
     event.preventDefault()
     let songEndPoint = `https://www.theaudiodb.com/api/v1/json/1/searchtrack.php?s=${this.state.artist}&t=${this.state.song}`
     let lyricsEndPoint = `https://api.lyrics.ovh/v1/${this.state.artist}/${this.state.song}`
-    console.log('songEndPoint', songEndPoint)
-    console.log('lyricsEndPoint', lyricsEndPoint)
     this.getApiSongs(songEndPoint)
     this.getLyrics(lyricsEndPoint)
   }
@@ -118,16 +115,12 @@ class App extends Component {
   handleSubmitArtists(event) {
     event.preventDefault()
     let endPoint = `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${this.state.artist}`
-
-    console.log(endPoint)
     this.getApiArtists(endPoint)
   }
 
   handleSubmitAlbums(event) {
     event.preventDefault()
     let endPoint = `https://www.theaudiodb.com/api/v1/json/1/searchalbum.php?a=${this.state.album}`
-
-    console.log(endPoint)
     this.getApiAlbums(endPoint)
   }
 

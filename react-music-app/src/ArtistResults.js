@@ -4,11 +4,6 @@ class ArtistResults extends React.Component {
 
     render() {
         const { artistData, match: { params: { artistName } } } = this.props
-        console.log(this.props)
-        console.log('artistData: ', artistData)
-        console.log('artistName: ', artistName)
-
-
 
         return (
             <div className='results'>

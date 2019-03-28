@@ -5,10 +5,6 @@ class AlbumResults extends React.Component {
 
     render() {
         const { allAlbums, match: { params: { albumName, artistName } } } = this.props
-        console.log(this.props)
-        console.log('allAlbums: ', allAlbums)
-        console.log('albumName: ', albumName)
-        console.log('artistName: ', artistName)
 
         const selectedAlbum = allAlbums.find(album => {
             return (album.strAlbum === albumName && album.strArtist === artistName)
@@ -18,7 +14,7 @@ class AlbumResults extends React.Component {
             <div className='results'>
                 {selectedAlbum &&
                     <div>
-                        <div>Album Name: {selectedAlbum.strAlbum}</div>
+                        <h1>{selectedAlbum.strAlbum}</h1>
                         <div>Artist: {selectedAlbum.strArtist}</div>
                         <div>Label: {selectedAlbum.strLabel}</div>
                         <div>Genre: {selectedAlbum.strGenre}</div>
