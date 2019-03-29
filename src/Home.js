@@ -48,7 +48,7 @@ class Home extends React.Component {
 
     handleSubmitCountry(event) {
         event.preventDefault()
-        let endPoint = `http://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=${this.state.country}&limit=20&api_key=${api_key}&format=json`
+        let endPoint = `https://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=${this.state.country}&limit=20&api_key=${api_key}&format=json`
         // console.log(endPoint)
         this.getTopArtists(endPoint)
     }
