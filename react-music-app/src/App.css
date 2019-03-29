@@ -66,11 +66,12 @@ input[type='text']{
   border-style: none;
   border-bottom: 1px solid #e7dfdd;
   text-align: center;
+  color:#e7dfdd
   
 }
 
 ::placeholder {
-  color: white;
+  color: #e7dfdd
 }
 
 input[type='submit'] {
@@ -116,7 +117,6 @@ input[type='submit'] {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /* height: 100vh; */
   width: 100vw;
   padding-bottom: 20px;
 }
@@ -128,7 +128,11 @@ input[type='submit'] {
 
 .results a{
   text-decoration: none;
-  color: yellow;
+  color: #e7dfdd
+}
+
+.results a:hover {
+text-decoration: underline
 }
 
 .album-artist{
@@ -141,8 +145,9 @@ input[type='submit'] {
 }
 
 h4{
-  text-decoration: underline;
-}
+font-size: 20px}
+
+
 
 
 
@@ -162,18 +167,35 @@ h4{
   width: 100vw;
 }
 
+.song-image-description img {
+  padding-left: 30px
+}
+
 .album-info h1{
   margin: 0
 }
 
+.song-info h1{
+  margin: 0
+}
+
+.song-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 30vh;
+  width: 100vw
+}
+
 .song-description {
-  width: 500px;
+  /* width: 500px; */
   height: 200px;
   overflow-y: scroll
 
 }
 .song-lyrics {
-  width: 500px;
+  /* width: 500px; */
   height: 200px;
   overflow-y: scroll
 
@@ -258,9 +280,6 @@ h4{
   width: 100px;
 }
 
-.main{
- 
-}
 
 .forms{
   display: flex;
@@ -319,4 +338,59 @@ img {
 
 .album-description{
   width: 300px;
+}
+
+.hoverbox *{
+  box-sizing: border-box;
+} 
+.hoverbox {
+position: relative;
+display: inline-block;
+overflow: hidden;
+max-width: 100%;
+height: auto;
+}
+
+.hoverbox img {
+  max-width: 100%
+}
+
+.hoverbox .hovervox-layer-bottom{
+  display: block;
+}
+
+.hoverbox .hoverbox-layer-top {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 0; 
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+  color: #fff;
+  padding: 15px;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.hoverbox:hover .hoverbox-layer-top, .hoverbox.active .hoverbox-layer-top{
+  opacity: 1;
+}
+
+.hoverbox .hoverbox-text {
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.hoverbox .hoverbox-text .hoverbox-text-name {
+  font-size: 15px;
+}
+.hoverbox .hoverbox-text .hoverbox-text-listeners {
+  font-size: 12px;
 }

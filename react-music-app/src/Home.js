@@ -35,6 +35,7 @@ class Home extends React.Component {
             container[0] = artist.name
             // container[1] = parseInt(artist.listeners)
             container[1] = artist.image[2]['#text']
+            container[2] = artist.listeners
             return container
         })
         // console.log('update', info.unshift(['Artist', 'Listeners']))
@@ -96,20 +97,22 @@ class Home extends React.Component {
                     >
 
                         {this.state.artistListeners.map((element, index) =>
-                            // <div key={index}>
-                            //     <img
-                            //         src={element[1]}
-                            //         onMouseOver={e => (console.log('event:', e.currentTarget))}
-                            //     />
-                            //     <span>overlay text</span>
-                            // </div>
-                            <div key={index}>
+
+                            <div key={index} className='hoverbox'>
                                 <img
                                     src={element[1]}
-                                    onMouseOver={e => (console.log('event:', e.currentTarget))}
+                                    className='hoverbox-layer-bottom'
                                 />
-                                <span>overlay text</span>
+                                <div className='hoverbox-layer-top'>
+                                    <div className='hoverbox-text'>
+                                        <div className='hoverbox-text-name'>{element[0]}</div>
+                                        <div className='hoverbox-text-listeners'>{element[2]} listeners</div>
+                                    </div>
+                                </div>
+
                             </div>
+
+
                         )}
 
                     </StackGrid>

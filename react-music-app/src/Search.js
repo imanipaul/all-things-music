@@ -50,7 +50,7 @@ class Search extends Component {
                                     <h4>Results</h4>
                                     {this.props.allAlbums.map(element =>
                                         <div key={element.idAlbum}>
-                                            <Link className='album-link' to={`/albums/${element.strAlbum}/${element.strArtist}`}>{element.strAlbum} </Link><p className='album-artist'>By: {element.strArtist}</p>
+                                            <Link className='album-link' to={`/albums/${element.strAlbum}/${element.strArtist}`}>{element.strAlbum} By: {element.strArtist} </Link><p className='album-artist'></p>
 
                                         </div>
                                     )}
