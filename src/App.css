@@ -21,12 +21,30 @@ color: #e7dfdd;
 overflow: scroll;
 }
 
+
 .search-page{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.3);
   padding-bottom: 10px;
+
+}
+
+label {
+  font-size: 20px;
+}
+
+input[type='text'] {
+  font-size: 15px;
+}
+
+.results {
+  font-size: 20px;
+  padding-right: 130px;
+}
+
+.landing{
 
 }
 
@@ -74,6 +92,17 @@ input[type='text']{
   color: #e7dfdd
 }
 
+.enter-button:hover{
+  background-color: #e7dfdd;
+  color: #0e0b16
+}
+
+
+
+.form-enter{
+  width: 100vw;
+}
+
 input[type='submit'] {
   background-color: transparent;
   border-radius: 10px;
@@ -81,6 +110,15 @@ input[type='submit'] {
   width: 80px;
   color: #e7dfdd;
 }
+
+
+input.enter-button{
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  /* background-color: #0e0b16; */
+  /* color: #a239ca */
+  }
 
 .footer {
   display: flex;
@@ -99,8 +137,26 @@ input[type='submit'] {
   justify-content: space-around;
   align-items: center;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3)
+  background-color: rgba(0, 0, 0, 0.3);
+  
 }
+
+.landing h1{
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-bottom: 100%;
+    width: 300%
+  }
+  to{
+    margin-left: 0%;
+    width: 100%
+  }
+}
+
 
 .album-results-render{
   display:flex;
@@ -263,9 +319,11 @@ font-size: 20px}
 .nav button {
   background-color: transparent;
   border-radius: 10px;
-  height: 20px;
-  width: 80px;
+  height: 30px;
+  width: 100px;
   color: #e7dfdd;
+  font-size: 15px;
+  font-weight: bold;
 
 }
 
@@ -292,9 +350,7 @@ font-size: 20px}
 
 }
 
-.results{
-  padding-right: 50px;
-}
+
 
 .forms-results{
   flex-wrap: wrap;

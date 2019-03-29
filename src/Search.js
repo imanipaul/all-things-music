@@ -24,8 +24,8 @@ class Search extends Component {
 
                             <label className='songs-submit-label'>
                                 A song:
-                        <input className='songs-submit-input-artist' onChange={this.props.handleChangeArtist} name='criteria' type='text' placeholder='artist' />
-                                <input className='songs-submit-input-song' onChange={this.props.handleChangeSong} name='criteria' type='text' placeholder='Enter Song Title' />
+                                <input className='songs-submit-input-song' onChange={this.props.handleChangeSong} name='criteria' type='text' placeholder='Enter Song Title ...' />
+                                <input className='songs-submit-input-artist' onChange={this.props.handleChangeArtist} name='criteria' type='text' placeholder='...And Artist Name' />
 
                             </label>
                             <input className='songs-submit-button' type='Submit' onClick={this.toggleSongClicked} />
