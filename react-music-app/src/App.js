@@ -224,9 +224,9 @@ class App extends Component {
         <Route
           exact path='/songs/:songName'
           render={
-            (props) => (
+            () => (
               < SongResults
-                {...props} songData={this.state.songData} songLyrics={this.state.lyrics}
+                songData={this.state.songData} songLyrics={this.state.lyrics}
               />
             )} />
 

@@ -96,9 +96,19 @@ class Home extends React.Component {
                     >
 
                         {this.state.artistListeners.map((element, index) =>
+                            // <div key={index}>
+                            //     <img
+                            //         src={element[1]}
+                            //         onMouseOver={e => (console.log('event:', e.currentTarget))}
+                            //     />
+                            //     <span>overlay text</span>
+                            // </div>
                             <div key={index}>
-                                {/* <p>{element[0]}</p> */}
-                                <img src={element[1]} />
+                                <img
+                                    src={element[1]}
+                                    onMouseOver={e => (console.log('event:', e.currentTarget))}
+                                />
+                                <span>overlay text</span>
                             </div>
                         )}
 
