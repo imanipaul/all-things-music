@@ -10,25 +10,23 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
- 
+
   /* background by SVGBackgrounds.com */
   background-color: #a239ca;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23a239ca'/%3E%3Cstop offset='1' stop-color='%234717f6'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
-background-attachment: fixed;
-background-size: cover;
-height: 100vh;
-color: #e7dfdd;
-overflow: scroll;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23a239ca'/%3E%3Cstop offset='1' stop-color='%234717f6'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  color: #e7dfdd;
+  overflow: scroll;
 }
 
-
-.search-page{
+.search-page {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.3);
   padding-bottom: 10px;
-
 }
 
 label {
@@ -44,12 +42,10 @@ input[type='text'] {
   padding-right: 130px;
 }
 
-.landing{
-
+.landing {
 }
 
-
-nav{
+nav {
   /* margin-top: 20px;
   margin-bottom: 20px; */
   height: 40px;
@@ -62,11 +58,11 @@ nav{
   width: 100vw;
 }
 
-.home-text{
+.home-text {
   padding-bottom: 30px;
 }
 
-.grid{
+.grid {
   width: 100vw;
 }
 
@@ -74,32 +70,33 @@ h1 {
   font-family: 'Yatra One', cursive;
   font-size: 50px;
 }
-h3, p, a, Link, div {
+h3,
+p,
+a,
+Link,
+div {
   font-family: 'Noto Sans', sans-serif;
 }
 
-input[type='text']{
+input[type='text'] {
   /* background: rgba(0, 0, 0, 0.44); */
   background: transparent;
   border-style: none;
   border-bottom: 1px solid #e7dfdd;
   text-align: center;
-  color:#e7dfdd
-  
+  color: #e7dfdd;
 }
 
 ::placeholder {
-  color: #e7dfdd
+  color: #e7dfdd;
 }
 
-.enter-button:hover{
+.enter-button:hover {
   background-color: #e7dfdd;
-  color: #0e0b16
+  color: #0e0b16;
 }
 
-
-
-.form-enter{
+.form-enter {
   width: 100vw;
 }
 
@@ -111,14 +108,13 @@ input[type='submit'] {
   color: #e7dfdd;
 }
 
-
-input.enter-button{
+input.enter-button {
   width: 200px;
   height: 30px;
   font-size: 20px;
   /* background-color: #0e0b16; */
   /* color: #a239ca */
-  }
+}
 
 .footer {
   display: flex;
@@ -127,8 +123,12 @@ input.enter-button{
   align-items: flex-end;
   height: 40px;
   width: 100vw;
-  padding-top:20px;
+  padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.footer a {
+  color: white;
 }
 
 .landing {
@@ -138,10 +138,9 @@ input.enter-button{
   align-items: center;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
-  
 }
 
-.landing h1{
+.landing h1 {
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -149,17 +148,16 @@ input.enter-button{
 @keyframes slidein {
   from {
     margin-bottom: 100%;
-    width: 300%
+    width: 300%;
   }
-  to{
+  to {
     margin-left: 0%;
-    width: 100%
+    width: 100%;
   }
 }
 
-
-.album-results-render{
-  display:flex;
+.album-results-render {
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -168,8 +166,8 @@ input.enter-button{
   padding-bottom: 20px;
 }
 
-.song-results-render{
-  display:flex;
+.song-results-render {
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -177,37 +175,34 @@ input.enter-button{
   padding-bottom: 20px;
 }
 
-.album-description{
+.album-description {
   height: 200px;
-  overflow-y: scroll
+  overflow-y: scroll;
 }
 
-.results a{
+.results a {
   text-decoration: none;
-  color: #e7dfdd
+  color: #e7dfdd;
 }
 
 .results a:hover {
-text-decoration: underline
+  text-decoration: underline;
 }
 
-.album-artist{
-  display:inline-block;
-}
-
-.album-link{
+.album-artist {
   display: inline-block;
-  margin: 10px
 }
 
-h4{
-font-size: 20px}
+.album-link {
+  display: inline-block;
+  margin: 10px;
+}
 
+h4 {
+  font-size: 20px;
+}
 
-
-
-
-.album-image-description{
+.album-image-description {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -215,7 +210,7 @@ font-size: 20px}
   width: 100vw;
 }
 
-.song-image-description{
+.song-image-description {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -224,37 +219,35 @@ font-size: 20px}
 }
 
 .song-image-description img {
-  padding-left: 30px
+  padding-left: 30px;
 }
 
-.album-info h1{
-  margin: 0
+.album-info h1 {
+  margin: 0;
 }
 
-.song-info h1{
-  margin: 0
+.song-info h1 {
+  margin: 0;
 }
 
-.song-info{
+.song-info {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   height: 30vh;
-  width: 100vw
+  width: 100vw;
 }
 
 .song-description {
   /* width: 500px; */
   height: 200px;
-  overflow-y: scroll
-
+  overflow-y: scroll;
 }
 .song-lyrics {
   /* width: 500px; */
   height: 200px;
-  overflow-y: scroll
-
+  overflow-y: scroll;
 }
 
 /* .short-text{
@@ -262,24 +255,21 @@ font-size: 20px}
   overflow-y: scroll
 } */
 
-.album-results{
+.album-results {
   background-color: rgba(0, 0, 0, 0.3);
   /* height: 100vh */
-
 }
 
-.song-results{
+.song-results {
   background-color: rgba(0, 0, 0, 0.3);
-
 }
 
-.artist-results{
+.artist-results {
   background-color: rgba(0, 0, 0, 0.3);
-
 }
 
-.artist-results-render{
-  display:flex;
+.artist-results-render {
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -287,11 +277,11 @@ font-size: 20px}
   padding-bottom: 20px;
 }
 
-.artist-info h1{
-  margin: 0
+.artist-info h1 {
+  margin: 0;
 }
 
-.artist-image-description{
+.artist-image-description {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -299,9 +289,9 @@ font-size: 20px}
   width: 100vw;
 }
 
-.artist-description{
+.artist-description {
   height: 200px;
-  overflow-y: scroll
+  overflow-y: scroll;
 }
 
 .footer div {
@@ -309,7 +299,7 @@ font-size: 20px}
   padding-top: 5px;
 }
 
-.chart{
+.chart {
   display: flex;
   width: 100vw;
   align-items: center;
@@ -324,22 +314,20 @@ font-size: 20px}
   color: #e7dfdd;
   font-size: 15px;
   font-weight: bold;
-
 }
 
 .artist-image-description img {
-  padding-left: 30px
+  padding-left: 30px;
 }
 
-.nav button:hover{
+.nav button:hover {
   background-color: white;
-  color:#0e0b16;
+  color: #0e0b16;
   height: 30px;
   width: 100px;
 }
 
-
-.forms{
+.forms {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -347,12 +335,9 @@ font-size: 20px}
   /* height: 100vh;
   width: 100vw; */
   padding-left: 50px;
-
 }
 
-
-
-.forms-results{
+.forms-results {
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
@@ -361,57 +346,57 @@ font-size: 20px}
   height: 100vh;
 }
 
-.songs-submit-input-artist{
-  margin-left: 10px
-}
-.songs-submit-input-song{
+.songs-submit-input-artist {
   margin-left: 10px;
-  margin-right: 10px
+}
+.songs-submit-input-song {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-input[name='artist']{
-margin-left: 10px;
-margin-right: 10px
+input[name='artist'] {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-input[name='album']{
-margin-left: 10px;
-margin-right: 10px
+input[name='album'] {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.artist-info{
+.artist-info {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   height: 30vh;
-  width: 100vw
+  width: 100vw;
 }
 
 img {
   height: 200px;
 }
 
-.album-description{
+.album-description {
   width: 300px;
 }
 
-.hoverbox *{
+.hoverbox * {
   box-sizing: border-box;
-} 
+}
 .hoverbox {
-position: relative;
-display: inline-block;
-overflow: hidden;
-max-width: 100%;
-height: auto;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
 }
 
 .hoverbox img {
-  max-width: 100%
+  max-width: 100%;
 }
 
-.hoverbox .hovervox-layer-bottom{
+.hoverbox .hovervox-layer-bottom {
   display: block;
 }
 
@@ -419,18 +404,23 @@ height: auto;
   opacity: 0;
   position: absolute;
   top: 50%;
-  left: 0; 
+  left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
   height: 50%;
-  background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+  background: linear-gradient(
+    to bottom,
+    rgba(72, 76, 97, 0) 0%,
+    rgba(72, 76, 97, 0.8) 75%
+  );
   color: #fff;
   padding: 15px;
   transition: all 0.4s ease-in-out 0s;
 }
 
-.hoverbox:hover .hoverbox-layer-top, .hoverbox.active .hoverbox-layer-top{
+.hoverbox:hover .hoverbox-layer-top,
+.hoverbox.active .hoverbox-layer-top {
   opacity: 1;
 }
 
@@ -441,7 +431,7 @@ height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
 }
 
 .hoverbox .hoverbox-text .hoverbox-text-name {
