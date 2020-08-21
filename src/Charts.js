@@ -61,6 +61,7 @@ function Charts() {
                 <img src={track.album.cover} alt="album cover" />
                 <div>{track.title}</div>
                 <div>{track.artist.name}</div>
+                <audio controls src={track.preview}></audio>
               </div>
             ))}
           </div>
