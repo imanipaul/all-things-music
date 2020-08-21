@@ -25,47 +25,50 @@ function Charts() {
 
   return (
     <section className="charts">
-      <div>
-        Albums
-        {albums && (
-          <div>
-            {albums.map((album) => (
-              <div key={album.id}>
-                <img src={album.cover} alt="album cover" />
-                <div>{album.title}</div>
-                <div>{album.artist.name}</div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-      <div>
-        Artists
-        {artists && (
-          <div>
-            {artists.map((artist) => (
-              <div key={artist.id}>
-                <img src={artist.picture} alt="artist" />
-                <div>{artist.name}</div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-      <div>
-        Tracks
-        {tracks && (
-          <div>
-            {tracks.map((track) => (
-              <div key={track.id}>
-                <img src={track.album.cover} alt="album cover" />
-                <div>{track.title}</div>
-                <div>{track.artist.name}</div>
-                <audio controls src={track.preview}></audio>
-              </div>
-            ))}
-          </div>
-        )}
+      <h3>Top Charts</h3>
+      <div className="data">
+        <div className="data-column">
+          <h4>Albums</h4>
+          {albums && (
+            <div>
+              {albums.map((album) => (
+                <div key={album.id} className="album">
+                  <img src={album.cover} alt="album cover" />
+                  <p>{album.title}</p>
+                  <p>{album.artist.name}</p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+        <div className="data-column">
+          <h4>Artists</h4>
+          {artists && (
+            <div>
+              {artists.map((artist) => (
+                <div key={artist.id} className="artist">
+                  <img src={artist.picture} alt="artist" />
+                  <p>{artist.name}</p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+        <div className="data-column">
+          <h4>Tracks</h4>
+          {tracks && (
+            <div>
+              {tracks.map((track) => (
+                <div key={track.id} className="track">
+                  <img src={track.album.cover} alt="album cover" />
+                  <p>{track.title}</p>
+                  <p>{track.artist.name}</p>
+                  <audio controls src={track.preview}></audio>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
