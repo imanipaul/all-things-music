@@ -5,8 +5,7 @@ export default function Footer() {
     <a
       href="https://github.com/imanipaul/all-things-music"
       target="_blank"
-      noopener
-      noreferrer
+      rel="noopener noreferrer"
     >
       <div>Find source code here!</div>
     </a>
