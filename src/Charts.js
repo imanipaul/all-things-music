@@ -50,10 +50,10 @@ function Charts() {
         {tracks && (
           <div>
             {tracks.map((track) => (
-              <>
-                <div key={track.id}>Title:{track.title}</div>
-                <div key={track.artist.id}>Artist:{track.artist.name}</div>
-              </>
+              <div key={track.id}>
+                <div>Title:{track.title}</div>
+                <div>Artist:{track.artist.name}</div>
+              </div>
             ))}
           </div>
         )}
