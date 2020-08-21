@@ -30,7 +30,11 @@ function Charts() {
         {albums && (
           <div>
             {albums.map((album) => (
-              <div key={album.id}>{album.title}</div>
+              <div key={album.id}>
+                <img src={album.cover} alt="album cover" />
+                <div>{album.title}</div>
+                <div>{album.artist.name}</div>
+              </div>
             ))}
           </div>
         )}
@@ -40,7 +44,10 @@ function Charts() {
         {artists && (
           <div>
             {artists.map((artist) => (
-              <div key={artist.id}>{artist.name}</div>
+              <div key={artist.id}>
+                <img src={artist.picture} alt="artist" />
+                <div>{artist.name}</div>
+              </div>
             ))}
           </div>
         )}
@@ -51,8 +58,9 @@ function Charts() {
           <div>
             {tracks.map((track) => (
               <div key={track.id}>
-                <div>Title:{track.title}</div>
-                <div>Artist:{track.artist.name}</div>
+                <img src={track.album.cover} alt="album cover" />
+                <div>{track.title}</div>
+                <div>{track.artist.name}</div>
               </div>
             ))}
           </div>
